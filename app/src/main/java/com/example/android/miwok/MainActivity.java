@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Declare textviews for setting onClickListener for each TextView
+        // Declare TextViews for setting onClickListener for each TextView
         TextView numbers = (TextView) findViewById(R.id.numbers),
                 colors = (TextView) findViewById(R.id.colors),
                 family = (TextView) findViewById(R.id.family),
