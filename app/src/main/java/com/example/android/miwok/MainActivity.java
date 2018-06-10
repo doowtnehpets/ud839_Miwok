@@ -19,6 +19,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +31,48 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        // Declare textviews for setting onClickListener for each TextView
+        TextView numbers = (TextView) findViewById(R.id.numbers),
+                colors = (TextView) findViewById(R.id.colors),
+                family = (TextView) findViewById(R.id.family),
+                phrases = (TextView) findViewById(R.id.phrases);
+
+        // Set the OnClick listener for the numbers TextView
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+
+        // Set the OnClick listener for the colors TextView
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
+
+        // Set the OnClick listener for the family TextView
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+        // Set the OnClick listener for the phrases TextView
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
+            }
+        });
     }
 
-    public void openNumbersList(View view) {
-        Intent i = new Intent(this, NumbersActivity.class);
-        startActivity(i);
-    }
 }
