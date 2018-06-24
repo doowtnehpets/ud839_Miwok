@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,9 +44,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word currentWord = getItem(position);
 
         // Find the LinearLayout in the list_item.xml layout with the ID words_linear_layout
-        LinearLayout wordsLinearLayout = (LinearLayout) listItemView.findViewById(R.id.words_linear_layout);
+        FrameLayout wordsFrameLayout = (FrameLayout) listItemView.findViewById(R.id.words_frame_layout);
         // Set the background color of the linear layout
-        wordsLinearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), linearLayoutBackgrounColor));
+        wordsFrameLayout.setBackgroundColor(ContextCompat.getColor(getContext(), linearLayoutBackgrounColor));
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
