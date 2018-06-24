@@ -18,6 +18,7 @@ public class FamilyActivity extends AppCompatActivity {
 
     // AudioManager to manage focus of sounds
     private AudioManager audioManager;
+
     // Listener for triggering when audio focus changes
     private AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
@@ -43,6 +44,7 @@ public class FamilyActivity extends AppCompatActivity {
             }
         }
     };
+
     // Listener gets triggered when {@link MediaPlayer} has completed playing audio
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
