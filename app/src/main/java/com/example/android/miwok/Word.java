@@ -12,14 +12,34 @@ public class Word {
     // Miwok translation for the word
     private String mMiwokTranslation;
 
+    // Image resource ID
+    private int mImageResourceId;
+
+    // Sound resource ID
+    private int mAudioResourceId;
+
     /**
      * Constructor. Stores given words in the corresponding variables
      * @param defaultTranslation Default translation
      * @param miwokTranslation Miwok translation
      */
-    public Word(String defaultTranslation, String miwokTranslation){
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
+    }
+
+    /**
+     * Constructo, stores image id and words in corresponding variables
+     * @param imageResourceId Image resource id
+     * @param defaultTranslation Default translation
+     * @param miwokTranslation Miwok translation
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     // Get the default translation of the word
@@ -31,4 +51,10 @@ public class Word {
     public String getmMiwokTranslation() {
         return mMiwokTranslation;
     }
+
+    // Get the image resource ID
+    public int getmImageResourceId() { return mImageResourceId; }
+
+    // Get the audio resource ID
+    public int getmAudioResourceId() { return mAudioResourceId; }
 }
