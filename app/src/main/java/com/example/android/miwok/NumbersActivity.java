@@ -57,6 +57,13 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words);
 
+        // Enable Up navigation
+        try {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         // Create and set up {@link AudioManager} to request audio focus
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
