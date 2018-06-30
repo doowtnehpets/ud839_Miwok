@@ -17,6 +17,7 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        // Return the correct fragment for the current position
         switch (position) {
             case 0:
                 return new NumbersFragment();
@@ -28,6 +29,23 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
                 return new PhrasesFragment();
             default:
                 return new NumbersFragment();
+        }
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // Return the correct title for the current position
+        switch (position) {
+            case 0:
+                return "Numbers";
+            case 1:
+                return "Family";
+            case 2:
+                return "Colors";
+            case 3:
+                return "Phrases";
+            default:
+                return "Numbers";
         }
     }
 
